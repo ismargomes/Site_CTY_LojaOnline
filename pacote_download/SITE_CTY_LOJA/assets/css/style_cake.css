@@ -47,7 +47,7 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 25px; /*margin-right: 20px;*/
 }
 nav ul li a{
     text-decoration: none;
@@ -657,7 +657,7 @@ th:last-child{
 }
 
 .col-2 h3{
-    font-size: 30px;
+    font-size: 60px;/* NOME CAKE TO YOU PARA FICAR RESPONSIVO 30PX */
 }
 
 .col-2 h1{
