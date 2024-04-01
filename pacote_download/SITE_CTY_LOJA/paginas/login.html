@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Site Cake To You com ajax-jquery">
+      <meta name="author" content="Ismar Gomes">
+
+      <title>Pagina Cadastro Loja Online</title>
+
+      <!-- Link para copiar os ICONS do Footer -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!--Este link é importar um arquivo de estilo CSS que contém os ícones da biblioteca Font Awesome. -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="../assets/css/style.css"><!-- MENU RESPONSIVO-->
+      <style>
+        :root{
+            --cor-padrao: #ff523b;
+            --cor-padrao-hover: #f3b2e5;
+            --cor-fonte: #fff;
+            --cor-fonte-p: #555;
+            --cor-btn: #563434;
+            --cor-btn-hover:#15ff00;
+            --cor-btn-fonte: #000;
+            --cor-fonte-corpo: #555;
+            --cor-fonte-corpo-leve: #777;
+        }
+
+        body{
+            font-family: 'poppins', sans-serif;
+        }
+
+        .container{
+            max-width: 1235px;
+            margin: auto;
+            margin-top: -110px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        p{
+            color: var(--cor-fonte-p);
+        }
+        .linha{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            }
+        .col-2{
+            flex-basis: 45%;
+            min-width: 300px;
+        }
+        .section_titulo{
+            margin-top: 80px;
+        }
+        .col-2 img{
+            max-width: 75%;
+            padding: 37px 30px;
+            margin-left: 11%;
+            margin-top: -36px;
+        }
+        .col-2 h1{
+            font-size: 50px;
+            line-height: 60px;
+            margin: 25px 0;
+        }
+        .col-2 p{
+            font-weight: 600;
+            color: var(--cor-btn-fonte);
+        }
+        .col-2 .btn{
+            text-decoration: none;
+            color: var(--cor-fonte);
+            background: var(--cor-btn);
+            padding: 8px 30px;
+            margin: 30px 0;
+            border-radius: 30px;
+            transition: 0.5s;
+        }
+        .col-2 .btn:hover{
+            color: var(--cor-btn-fonte);
+            background: var(--cor-btn-hover);
+        }
+        /* =========  MINHA CONTA  ========= */
+
+        .minha-conta {
+            background: radial-gradient(var(--cor-padrao-hover), var(--cor-padrao));
+            padding: 182px 0;
+        }
+
+        .formulario{
+            position: relative;
+            padding: 35px 0;
+            text-align: center;
+            width: 370px;
+            height: 390px;
+            margin-top: 90px;
+            margin-left: 20%;
+            background-color: var(--cor-fonte);
+            box-shadow: 30px 0 20px 0 rgba(0, 0, 0, 0.1);
+            overflow: hidden; /*Tudo que tiver fora do overflow: hidden; (NÃO VAI APARECER) */
+        }
+
+        .formulario span{
+            display: inline-block;
+            width: 210px;
+            margin-left: -10px;
+            padding: 0 10px;
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--cor-fonte-corpo);
+            cursor: pointer;
+        }
+
+        .btn-form{
+            display: inline-block;
+
+        }
+
+        .formulario form{
+            position: absolute;
+            top: 104px;
+            max-width: 300px;
+            padding: 0 0px; /*padding: 0 20px; */
+            transition: transform 1s;
+        }
+
+        .formulario form input{
+            width: 100%; /*Largura do placeholder*/
+            height: 40px;
+            margin: 10px 0; /*espaço entre os placeholder*/
+            padding: 0 8px;
+            border: 1px solid var(--cor-padrao);
+            border-radius: 3px;
+        }
+
+        .formulario form input:focus{
+            outline: none;
+        }
+
+        .formulario form .btn{
+            width: 100%;
+            margin: 10px 40;
+            border: none;
+            border-radius: 4px;
+            background-color: var(--cor-padrao);
+            cursor: pointer;
+        }
+
+        .formulario form .btn:hover{
+            background-color: var(--cor-btn-hover);
+        }
+
+        .formulario form a{
+            font-size: 12px;
+            text-decoration: none;
+            color: var(--cor-fonte-corpo);
+            cursor: pointer;
+        }
+
+        #EntrarPainel{
+            left: -300px; /*Faz os input e botões virem para a esquerda*/
+        }
+
+        #CadastroSite{
+            left: 50px;
+        }
+
+        #Indicador{
+            width: 90px;
+            height: 3px;
+            border: none;
+            background-color: var(--cor-padrao);
+            margin-top: 0px;  
+            margin-left: 50px;        
+        }
+
+      </style>
+  </head>
+  <body>
+   
+    <!-- INICIO MINHA CONTA -->
+
+    <div class="minha-conta">
+
+      <div class="container">
+          <div class="linha">
+
+              <div class="col-2">
+              <h2 class="section__titulo" style="font-size: 32px; color: #fff; margin-left: 105px; margin-bottom: 10px; margin-top: 60px"><span class="section__titulo--destaque" style="font-size: 36px; color: #fff; ">Faça o cadastro</span></h2>
+                          
+              <img src="../assets/img/usuario.jpg" alt="" width="100%;">
+              </div>
+
+              <div class="col-2">
+                  <div class="formulario">
+
+                      <div class="btn-form"><!-- Serão botões-->
+                          
+                          <span>Login</span><!--Usar no JS login-->
+
+                          <hr id="Indicador"><!--Usar no JS login-->
+                      </div>
+                                          
+
+                      <form method="post" action="enviaCliente.php"  id="CadastroSite" style="margin-top: 0px; margin-left: -15px;">
+
+                          <input type="email" id="email" name="email" placeholder="E-mail"  required>
+
+                          <input type="password" id="password" name="senha" placeholder="Digite sua senha"  required>
+
+                         <!-- <input type="text" id="user_type" name="user_type" placeholder="User-Type" required>-->
+                                                                
+                          <button type="submit" name="senEntrar" style="margin: 14px 0px;" class="btn">Enviar</button>  
+                          
+                          <a href="cadastro.html" style="font-size: 20px;">Cadastre-se</a><br>
+                                                     
+                          <a href="index.html" style="font-size: 16px;" >Voltar</a>
+                                                  
+                      </form><!--Estes DADOS vão para serem inseridos na base de dados como utilizadores com capacidade de login na página web. -->                    
+                  </div>                 
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- FIM MINHA CONTA -->
+
+
+    <!--esse link é usado para importar o kit Font Awesome em seu site, permitindo que você use e personalize os ícones vetoriais fornecidos pela biblioteca Font Awesome por meio de tags HTML e estilos CSS.-->
+    <script src="https://kit.fontawesome.com/d132031da6.js" crossorigin="anonymous"></script>
+
+    <script>
+        const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+        const menu = document.querySelector('ul');
+
+        mobileMenuIcon.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        });
+    </script>   
+    <script>
+         if (diferencaAnos < idadeMinima) {
+                alert("Cadasro feito com Sucesso!");
+                return false;
+            }
+    </script>  
+      
+    <!-- ÁREA DA SCRIPT-->
+    <script src="assets/js/responsivo.js"></script>
+    <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
+   <!-- <script src="assets/js/login.js"></script>-->
+  </body>
+</html>
