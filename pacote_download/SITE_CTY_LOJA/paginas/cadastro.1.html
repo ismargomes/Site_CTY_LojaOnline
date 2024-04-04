@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="site Cake To You com ajax-jquery">
+      <meta name="description" content="Site Cake To You com ajax-jquery">
       <meta name="author" content="Ismar Gomes">
 
       <title>Pagina Cadastro Loja Online</title>
@@ -50,16 +50,16 @@
             justify-content: space-around;
             }
         .col-2{
-            flex-basis: 42%;
+            flex-basis: 45%;
             min-width: 300px;
         }
         .section_titulo{
             margin-top: 80px;
         }
         .col-2 img{
-            max-width: 82%;
+            max-width: 75%;
             padding: 37px 30px;
-            margin-left: 10%;
+            margin-left: 11%;
             margin-top: -36px;
         }
         .col-2 h1{
@@ -88,7 +88,7 @@
 
         .minha-conta {
             background: radial-gradient(var(--cor-padrao-hover), var(--cor-padrao));
-            padding: 164px 0;
+            padding: 182px 0;
         }
 
         .formulario{
@@ -96,8 +96,9 @@
             padding: 35px 0;
             text-align: center;
             width: 370px;
-            height: 620px;
-            margin-left: 14%;
+            height: 390px;
+            margin-top: 90px;
+            margin-left: 20%;
             background-color: var(--cor-fonte);
             box-shadow: 30px 0 20px 0 rgba(0, 0, 0, 0.1);
             overflow: hidden; /*Tudo que tiver fora do overflow: hidden; (NÃO VAI APARECER) */
@@ -106,7 +107,7 @@
         .formulario span{
             display: inline-block;
             width: 210px;
-            margin-top: -19px;
+            margin-left: -10px;
             padding: 0 10px;
             font-size: 26px;
             font-weight: bold;
@@ -169,11 +170,12 @@
         }
 
         #Indicador{
-            width: 195px;
+            width: 90px;
             height: 3px;
             border: none;
             background-color: var(--cor-padrao);
-            margin-top: 0px;          
+            margin-top: 0px;  
+            margin-left: 50px;        
         }
 
       </style>
@@ -184,49 +186,57 @@
 
     <div class="minha-conta">
 
-      <div class="container">
-          <div class="linha">
+        <div class="container">
+            <div class="linha">
 
-              <div class="col-2">
-
-                  <div class="formulario">
-
-                      <div class="btn-form"><!-- Serão botões-->
-                          
-                          <span>Cadastre-se</span><!--Usar no JS login-->
-
-                          <hr id="Indicador"><!--Usar no JS login-->
-                      </div>
-                                          
-
-                      <form method="post" action="enviaCliente.php"  id="CadastroSite" style="margin-top: 0px; margin-left: -15px;">
-
-                          <input type="text" id="name" name="nome_completo" placeholder="Nome completo"  required>
-
-                          <input type="text" id="user_name" name="nome_usuario" placeholder="User name"  required>
-
-                          <input type="text" id="endereco" name="endereco" placeholder="Endereço"  required>
-
-                          <input type="text" id="celular" name="celular" placeholder="Telemóvel"  required>
-
-                          <input type="email" id="email" name="email" placeholder="E-mail"  required>
-
-                          <input type="password" id="password" name="senha" placeholder="Digite sua senha"  required>
-
-                          <input type="hidden" id="user_type" name="user_type" placeholder="User-Type" required>
-                                                                
-                          <button type="submit" name="senEntrar" style="margin: 14px 0px;" class="btn">Enviar</button>  
-                          
-                          <a href="login.html" style="font-size: 20px;">Fazer login</a><br>
-                                                     
-                          <a href="index.html" style="font-size: 16px;" >Voltar</a>
-                                                  
-                      </form><!--Estes DADOS vão para serem inseridos na base de dados como utilizadores com capacidade de login na página web. -->                    
-                  </div>   
+                <div class="col-2">
+                    <h2 class="section__titulo" style="font-size: 32px; color: #fff; margin-left: 105px; margin-bottom: 10px; margin-top: 60px"><span class="section__titulo--destaque" style="font-size: 36px; color: #fff; ">Faça o cadastro</span></h2>
                                 
-              </div>
-          </div>
-      </div>
+                    <img src="../assets/img/cadastrando.png" alt="" width="100%;">
+                </div>
+
+                <div class="col-2">
+
+                    <div class="formulario">
+
+                        <div class="btn-form"><!-- Serão botões-->
+                            
+                            <span>Cadastre-se</span><!--Usar no JS login-->
+  
+                            <hr id="Indicador"><!--Usar no JS login-->
+                        </div>
+                                            
+  
+                        <form method="post" action="enviaCliente.php"  id="CadastroSite" style="margin-top: 0px; margin-left: -15px;">
+  
+                            <input type="text" id="name" name="nome_completo" placeholder="Nome completo"  required>
+  
+                            <input type="text" id="user_name" name="nome_usuario" placeholder="User name"  required>
+  
+                            <input type="text" id="endereco" name="endereco" placeholder="Endereço"  required>
+  
+                            <input type="text" id="celular" name="celular" placeholder="Telemóvel"  required>
+  
+                            <input type="email" id="email" name="email" placeholder="E-mail"  required>
+  
+                            <input type="password" id="password" name="senha" placeholder="Digite sua senha"  required>
+  
+                            <input type="hidden" id="user_type" name="user_type" placeholder="User-Type" required>
+                                                                  
+                            <button type="submit" name="senEntrar" style="margin: 14px 0px;" class="btn">Enviar</button>  
+                            
+                            <a href="login.html" style="font-size: 20px;">Fazer login</a><br>
+                                                       
+                            <a href="index.html" style="font-size: 16px;" >Voltar</a>
+                                                    
+                        </form><!--Estes DADOS vão para serem inseridos na base de dados como utilizadores com capacidade de login na página web. -->                    
+                    </div>   
+
+ 
+                                    
+                </div><!--Col-2-->
+            </div>
+        </div>
     </div>
     <!-- FIM MINHA CONTA -->
 
