@@ -178,6 +178,29 @@
             margin-left: 50px;        
         }
 
+        /* Estilos específicos para telas menores que 768px */
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 750px;
+            }
+
+            .col-2 {
+                flex-basis: 27%;
+                min-width: 597px;
+                /* flex-basis: 48%;
+                max-width: 48%; */
+            }
+
+            .formulario {
+                width: 370px;
+                margin-left: calc(50% - 155px);
+            }
+
+            #Indicador {
+                display: block; /* Mostrar o indicador para tel*/
+            }
+        }
       </style>
   </head>
   <body>
@@ -189,11 +212,11 @@
       <div class="container">
           <div class="linha">
 
-              <div class="col-2">
-              <h2 class="section__titulo" style="font-size: 32px; color: #fff; margin-left: 105px; margin-bottom: 10px; margin-top: 60px"><span class="section__titulo--destaque" style="font-size: 36px; color: #fff; ">Faça o cadastro</span></h2>
+              <!-- <div class="col-2">
+              <h2 class="section__titulo" style="font-size: 38px; color: #fff; margin-left: 132px; margin-bottom: 10px; margin-top: 60px"><span class="section__titulo--destaque" style="font-size: 36px; color: #fff; ">Faça o Login</span></h2>
                           
               <img src="../assets/img/usuario.jpg" alt="" width="100%;">
-              </div>
+              </div> -->
 
               <div class="col-2">
                   <div class="formulario">
